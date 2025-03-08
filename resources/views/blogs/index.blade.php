@@ -1,3 +1,6 @@
+<h1>SDJ International College</h1>
+<h2>Blog Management System</h2>
+
 <h1>List all blogs</h1>
 
 <a href="#">Create new blog</a>

@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        //adding a new column in blogs table
         Schema::table('blogs', function (Blueprint $table) {
             $table->string('category')->after('title')->nullable();
             $table->boolean('is_published')->default(false)->after('content');
