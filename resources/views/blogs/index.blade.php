@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Laravel</title>
-</head>
-
-<body>
+@section('content')
 <h1>SDJ International College</h1>
 <h2>Blog Management System</h2>
 
 <h1>List all blogs</h1>
 
-<a href="#">Create new blog</a>
+<a class="btn btn-success" href="{{ route('blogs.create') }}">Create new blog</a>
 
-<table>
+<table class="table">
     <tr>
         <th>ID</th>
         <th>Title</th>
@@ -27,9 +20,9 @@
         <td>{{ $blog->id }}</td>
         <td>{{ $blog->title }}</td>
         <td>
-            <a href="#">Show</a>
-            <a href="#">EDIT</a>
-            <a href="#">DELETE</a>
+            <a class="btn btn-small btn-primary" href="{{ route('blogs.show', [$blog->id]) }}">Show</a>
+            <a class="btn btn-small btn-warning" href="{{ route('blogs.edit', [$blog->id]) }}">EDIT</a>
+            <a class="btn btn-small btn-danger" href="#">DELETE</a>
 
         </td>
     </tr>
@@ -37,6 +30,4 @@
 
 
 </table>
-</body>
-
-</html>
+@endsection
