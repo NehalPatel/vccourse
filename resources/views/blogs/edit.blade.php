@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app-layout>
 <div class="container">
     <h2>Edit Blog</h2>
     <form action="{{ route('blogs.update', $blog->id) }}" method="POST">
@@ -17,4 +15,4 @@
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
-@endsection
+</x-app-layout>
